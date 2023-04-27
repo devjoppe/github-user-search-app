@@ -1,8 +1,16 @@
+import GitHubUser from "./api/api.tsx";
+import Header from "./sections/Header.tsx";
+
 function App() {
 
-  return (
-    <p>App</p>
-  )
+    const userData = GitHubUser()
+    console.log(userData)
+
+    return (
+      <div className="wrapper">
+        <Header />
+      </div>
+    )
 }
 
 export default App
