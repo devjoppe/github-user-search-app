@@ -16,11 +16,12 @@ const Search = ({onSearch}:onSearchProps) => {
         e.preventDefault()
         onSearch(searchQuery)
         console.log("Form submit", searchQuery)
+        setSearchQuery('')
     }
 
     return(
         <form onSubmit={handleSubmit}>
-            <input type="text" value={searchQuery} onChange={handleInput} placeholder="User name"/>
+            <input type="text" value={searchQuery} onChange={handleInput} placeholder="User name" required />
             <button type="submit">Search</button>
         </form>
     )
