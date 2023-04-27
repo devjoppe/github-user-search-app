@@ -5,7 +5,7 @@ function App() {
 
     const [userData, setUserData] = useState({})
 
-    const userResult = (result) => {
+    const userResult = (result:object) => {
         setUserData(result)
     }
 

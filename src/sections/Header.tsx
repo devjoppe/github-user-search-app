@@ -11,7 +11,7 @@ const Header = ({searchResult}:headerProps) => {
     const handleSearch = async (query:string) => {
         try {
             const userData = await GitHubUser(query)
-            console.log("Search query in header: ", userData)
+            console.log("Search query in header: ", userData.login)
             searchResult(userData)
         } catch (error) {
             console.log(error)
