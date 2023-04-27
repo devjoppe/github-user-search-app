@@ -1,6 +1,11 @@
+import Search from "../components/Search.tsx";
+
 const Header = () => {
     return(
-        <p>header</p>
+        <div>
+            <p>header</p>
+            <Search />
+        </div>
     )
 }
 
