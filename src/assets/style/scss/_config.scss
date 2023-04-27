@@ -1,16 +1,39 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+// Colors - Light mode
 :root {
---primary-color: #302AE6;
-}
+  --primary: #0079FF;
+  --secondary: #697C9A;
+  --dark-blue: #4B6A9B;
+  --h2-heading: #2B3442;
+  --background-main: #F6F8FF;
+  --grey-white: #FEFEFE;
 
+}
+// Colors - Dark mode
 [data-theme="dark"] {
-  --primary-color: #9A97F3;
-  color: green;
+  --primary: #0079FF;
+  --secondary: #FFFFFF;
+  --dark-blue: #141D2F;
+  --dark: #1E2A47;
+  --h2-heading: #ffffff;
+  --background-main: #141D2F;
+  --grey-white: #FEFEFE;
 }
 
-[data-theme="light"] {
-  $primary-color: grey;
-}
-
+// Container divs
 .wrapper {
-  background: var(--primary-color)
+  background: var(--background-main)
+}
+
+// Headings
+h2 {
+  font-weight: bold;
+  font-size: 26px;
+  color: var(--h2-heading)
 }
