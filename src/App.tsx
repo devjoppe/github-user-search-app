@@ -1,14 +1,19 @@
-import GitHubUser from "./api/api.tsx";
-import Header from "./sections/Header.tsx";
+import Header from "./sections/Header.tsx"
+import {useState} from "react";
 
 function App() {
 
-    const userData = GitHubUser()
-    console.log(userData)
+    const [userData, setUserData] = useState({})
+
+    const userResult = (result) => {
+        setUserData(result)
+    }
+
+    console.log("User data from App: ", userData)
 
     return (
       <div className="wrapper">
-        <Header />
+        <Header searchResult={userResult} />
       </div>
     )
 }

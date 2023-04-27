@@ -1,21 +1,15 @@
-import {useState, useEffect} from "react";
 import axios from "axios";
 
-const GitHubUser = () => {
-    const [userData, setUserData] = useState(null)
-
-    useEffect(() => {
-        const fetchUserData = async () => {
-            try{
-              const response = await axios.get('https://api.github.com/users/octocat')
-              setUserData(response.data)
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        fetchUserData()
-    }, [])
-    return userData
+const GitHubUser = async (query:string) => {
+    try {
+        console.log(query)
+        const response = await axios.get(`https://api.github.com/users/${query}`);
+        console.log("API: ", response.data)
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching results:', error);
+        return [];
+    }
 }
 
 export default GitHubUser
