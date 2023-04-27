@@ -1,12 +1,13 @@
 import Search from "../components/Search.tsx"
 import GitHubUser from "../api/api.tsx";
+import {useState} from "react";
 
 // Type for header props.
 interface headerProps {
-    searchResult: (data:object ) => void
+    searchResult: (data:object ) => void,
+    onToggleTheme: () => void
 }
-
-const Header = ({searchResult}:headerProps) => {
+const Header = ({searchResult, onToggleTheme}:headerProps) => {
 
     const handleSearch = async (query:string) => {
         try {
@@ -18,9 +19,18 @@ const Header = ({searchResult}:headerProps) => {
         }
     }
 
+    const [theme, setTheme] = useState('light')
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light')
+        onToggleTheme()
+    }
+
+    console.log("Header Theme: ", theme)
+
     return(
         <div>
             <p>header</p>
+            <button onClick={toggleTheme}>Toggle theme</button>
             <Search onSearch={handleSearch} />
         </div>
     )

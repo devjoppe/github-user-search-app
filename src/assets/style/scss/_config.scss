@@ -1,3 +1,16 @@
-body {
-  background: green;
+:root {
+--primary-color: #302AE6;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  color: green;
+}
+
+[data-theme="light"] {
+  $primary-color: grey;
+}
+
+.wrapper {
+  background: var(--primary-color)
 }
