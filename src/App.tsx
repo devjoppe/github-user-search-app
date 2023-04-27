@@ -1,4 +1,5 @@
 import Header from "./sections/Header.tsx"
+import Main from "./sections/Main.tsx"
 import {useState} from "react";
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
     console.log("User data from App: ", userData)
 
     return (
-      <div className="wrapper">
-        <Header searchResult={userResult} />
-      </div>
+        <div className="wrapper">
+            <Header searchResult={userResult} />
+            <Main profileData={userData}/>
+        </div>
     )
 }
 
