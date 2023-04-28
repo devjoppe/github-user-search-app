@@ -21,8 +21,10 @@ const Search = ({onSearch}:onSearchProps) => {
 
     return(
         <form onSubmit={handleSubmit}>
-            <input type="text" value={searchQuery} onChange={handleInput} placeholder="User name" required />
-            <button type="submit">Search</button>
+            <div className="search-field">
+                <input type="text" value={searchQuery} onChange={handleInput} placeholder="Search GitHub user name" required />
+                <button type="submit">Search</button>
+            </div>
         </form>
     )
 }

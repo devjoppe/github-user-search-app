@@ -20,8 +20,10 @@ function App() {
 
     return (
         <div className="wrapper" data-theme={theme}>
-            <Header searchResult={userResult} onToggleTheme={toggleTheme}/>
-            <Main profileData={userData} />
+            <div className="container">
+                <Header searchResult={userResult} onToggleTheme={toggleTheme}/>
+                <Main profileData={userData} />
+            </div>
         </div>
     )
 }
