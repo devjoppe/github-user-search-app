@@ -22,3 +22,26 @@
 .main-profile-bio {
   margin: 24px 0 24px 0;
 }
+
+.main-profile-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--background-main);
+  border-radius: 10px;
+  padding: 18px;
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .title {
+      margin-bottom: 8px;
+      color: var(--p-text);
+    }
+    .number {
+      color: var(--h2-heading);
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
