@@ -22,6 +22,7 @@ const Search = ({onSearch}:onSearchProps) => {
     return(
         <form onSubmit={handleSubmit}>
             <div className="search-field">
+                <img src="src/assets/icons/icon-search.svg" alt="Search icon" />
                 <input type="text" value={searchQuery} onChange={handleInput} placeholder="Search GitHub user name" required />
                 <button type="submit">Search</button>
             </div>

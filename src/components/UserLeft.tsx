@@ -2,7 +2,7 @@ import {profileInterface} from "../interfaces/profileInterface.tsx";
 
 const UserLeft = ({profileData}:profileInterface) => {
     return(
-        <div>
+        <div className="avatar">
             <img alt={profileData.name} src={profileData.avatar_url} />
         </div>
     )

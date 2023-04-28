@@ -1,5 +1,7 @@
 @use 'config';
 @use 'header';
+@use 'main';
 
 // Components
 @use 'components/search';
+@use 'components/avatar';

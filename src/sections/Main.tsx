@@ -3,8 +3,7 @@ import {profileInterface} from "../interfaces/profileInterface.tsx";
 
 const Main = ({profileData}:profileInterface) => {
     return(
-        <div>
-            <p>Main</p>
+        <div className="main-content">
             <UserMain profileData={profileData}/>
         </div>
     )
