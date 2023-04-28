@@ -19,9 +19,11 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
         }
     }
 
+    const [themeIcon, setThemeIcon] = useState('moon')
     const [theme, setTheme] = useState('light')
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
+        setThemeIcon(themeIcon === 'sun' ? 'moon' : 'sun')
         onToggleTheme()
     }
 
@@ -29,8 +31,14 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
 
     return(
         <div>
-            <p>header</p>
-            <button onClick={toggleTheme}>Toggle theme</button>
+            <div className="header-title-theme">
+                <h1>devfinder</h1>
+                <div onClick={toggleTheme} className="choose-theme">
+                    { theme === 'light' && (<>dark</>) }
+                    { theme === 'dark' && (<>light</>) }
+                    <img src={`src/assets/icons/icon-${themeIcon}.svg`} alt="icon" />
+                </div>
+            </div>
             <Search onSearch={handleSearch} />
         </div>
     )

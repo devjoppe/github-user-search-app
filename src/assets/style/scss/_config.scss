@@ -24,6 +24,7 @@ body {
   --white: #FFFFFF;
   --box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
+
 // Colors - Dark mode
 [data-theme="dark"] {
   --primary: #0079FF;
@@ -53,6 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 24px 0 24px;
+  padding: 32px 0 32px 0;
 }
 
 // Headings and paragraphs
@@ -61,9 +63,15 @@ h1, h2, h3, p {
   padding: 0;
 }
 
-h2 {
+h1 {
   font-weight: bold;
   font-size: 26px;
+  color: var(--h2-heading)
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 16px;
   color: var(--h2-heading)
 }
 
