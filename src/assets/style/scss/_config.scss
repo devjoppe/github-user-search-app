@@ -75,6 +75,11 @@ h2 {
   color: var(--h2-heading)
 }
 
+p {
+  color: var(--p-text);
+  line-height: 25px;
+}
+
 // Inputs
 input {
   border: 0;
