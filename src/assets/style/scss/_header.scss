@@ -11,8 +11,10 @@
   flex-direction: row;
   text-transform: uppercase;
   font-weight: bold;
+  color: var(--p-text);
   img {
-    width: 16px;
+    width: 20px;
+    height: 20px;
     margin-left: 16px;
   }
 }
