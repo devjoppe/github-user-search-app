@@ -1,6 +1,7 @@
 import Search from "../components/Search.tsx"
 import GitHubUser from "../api/api.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {useCallback} from "react";
 
 // Type for header props.
 interface headerProps {
@@ -9,7 +10,10 @@ interface headerProps {
 }
 const Header = ({searchResult, onToggleTheme}:headerProps) => {
 
-    const handleSearch = async (query:string) => {
+    const [themeIcon, setThemeIcon] = useState('moon')
+    const [theme, setTheme] = useState('light')
+
+    const handleSearch = useCallback(async (query:string) => {
         try {
             const userData = await GitHubUser(query)
             console.log("Search query in header: ", userData.login)
@@ -17,10 +21,14 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
         } catch (error) {
             console.log(error)
         }
-    }
+    }, [searchResult])
 
-    const [themeIcon, setThemeIcon] = useState('moon')
-    const [theme, setTheme] = useState('light')
+    useEffect(() => {
+        handleSearch('Octocat').then(() => {
+            console.log("Gets first user?")
+        })
+    }, [])
+
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
         setThemeIcon(themeIcon === 'sun' ? 'moon' : 'sun')

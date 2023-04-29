@@ -19,7 +19,7 @@ const UserMainLinks = ({profileData}:profileInterface) => {
                 {(profileData.blog ?
                     <>
                         <img className="isData" src="src/assets/icons/icon-website.svg" alt="Location" />
-                        <a href={profileData.blog}>
+                        <a href={profileData.blog} target="_blank">
                             <span className="isData">{profileData.blog}</span>
                         </a>
                     </> :
@@ -33,7 +33,7 @@ const UserMainLinks = ({profileData}:profileInterface) => {
                 {(profileData.twitter_username ?
                     <>
                         <img className="isData" src="src/assets/icons/icon-twitter.svg" alt="Location" />
-                        <span className="isData">{profileData.blog}</span>
+                        <span className="isData">{profileData.twitter_username}</span>
                     </> :
                     <>
                         <img className="none" src="src/assets/icons/icon-twitter.svg" alt="Location" />
