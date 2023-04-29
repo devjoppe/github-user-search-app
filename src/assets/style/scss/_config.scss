@@ -82,6 +82,14 @@ p {
   line-height: 25px;
 }
 
+a {
+  color: var(--p-text);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // Inputs
 input {
   border: 0;
