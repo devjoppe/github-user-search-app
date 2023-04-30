@@ -47,7 +47,7 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
                 <div onClick={toggleTheme} className="choose-theme">
                     { theme === 'light' && (<>dark</>) }
                     { theme === 'dark' && (<>light</>) }
-                    <img src={`src/assets/icons/icon-${themeIcon}.svg`} alt="icon" />
+                    <img src={`./icons/icon-${themeIcon}.svg`} alt="icon" />
                 </div>
             </div>
             <Search onSearch={handleSearch} noResult={checkStatus}/>

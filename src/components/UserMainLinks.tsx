@@ -12,24 +12,24 @@ const UserMainLinks = ({profileData}:profileInterface) => {
                 <div>
                     {(profileData.location ?
                         <>
-                            <img className="isData" src="src/assets/icons/icon-location.svg" alt="Location" />
+                            <img className="isData" src="./icons/icon-location.svg" alt="Location" />
                             <span className="isData">{profileData.location}</span>
                         </> :
                         <>
-                            <img className="none" src="src/assets/icons/icon-location.svg" alt="Location" />
+                            <img className="none" src="./icons/icon-location.svg" alt="Location" />
                             <span className="none">Not available</span></>
                     )}
                 </div>
                 <div>
                     {(profileData.blog ?
                         <>
-                            <img className="isData" src="src/assets/icons/icon-website.svg" alt="Location" />
+                            <img className="isData" src="./icons/icon-website.svg" alt="Location" />
                             <a href={profileData.blog} target="_blank">
                                 <span className="isData">{urlString}</span>
                             </a>
                         </> :
                         <>
-                            <img className="none" src="src/assets/icons/icon-website.svg" alt="Location" />
+                            <img className="none" src="./icons/icon-website.svg" alt="Location" />
                             <span className="none">Not available</span>
                         </>
                     )}
@@ -39,13 +39,13 @@ const UserMainLinks = ({profileData}:profileInterface) => {
                 <div>
                     {(profileData.twitter_username ?
                         <>
-                            <img className="isData" src="src/assets/icons/icon-twitter.svg" alt="Location" />
+                            <img className="isData" src="./icons/icon-twitter.svg" alt="Location" />
                             <a href={twitterUrl} target="_blank">
                                 <span className="isData">{profileData.twitter_username}</span>
                             </a>
                         </> :
                         <>
-                            <img className="none" src="src/assets/icons/icon-twitter.svg" alt="Location" />
+                            <img className="none" src="./icons/icon-twitter.svg" alt="Location" />
                             <span className="none">Not available</span>
                         </>
                     )}
@@ -53,13 +53,13 @@ const UserMainLinks = ({profileData}:profileInterface) => {
                 <div>
                     {(profileData.company ?
                             <>
-                                <img className="isData" src="src/assets/icons/icon-company.svg" alt="Location" />
+                                <img className="isData" src="./icons/icon-company.svg" alt="Location" />
                                 <a href={companyUrl} target="_blank">
                                     <span className="isData">{profileData.company}</span>
                                 </a>
                             </> :
                             <>
-                                <img className="none" src="src/assets/icons/icon-company.svg" alt="Location" />
+                                <img className="none" src="./icons/icon-company.svg" alt="Location" />
                                 <span className="none">Not available</span>
                             </>
                     )}
