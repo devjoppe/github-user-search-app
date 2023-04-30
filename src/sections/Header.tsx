@@ -20,6 +20,7 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
             console.log("Result from API: ", userData)
             if(userData[0] === 'No result') {
                 setCheckStatus(userData)
+                return
             }
             searchResult(userData)
         } catch (error) {
