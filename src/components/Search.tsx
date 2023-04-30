@@ -1,10 +1,11 @@
 import {useState, ChangeEvent, FormEvent} from "react";
 
 interface onSearchProps {
-    onSearch: (data:string) => void
+    onSearch: (data:string) => void,
+    noResult: string
 }
 
-const Search = ({onSearch}:onSearchProps) => {
+const Search = ({onSearch, noResult}:onSearchProps) => {
 
     const [searchQuery, setSearchQuery] = useState('')
 
@@ -24,6 +25,7 @@ const Search = ({onSearch}:onSearchProps) => {
             <div className="search-field">
                 <img src="src/assets/icons/icon-search.svg" alt="Search icon" />
                 <input type="text" value={searchQuery} onChange={handleInput} placeholder="Search GitHub user name" required />
+                {noResult && <span className="no-result">{noResult}</span> }
                 <button type="submit">Search</button>
             </div>
         </form>

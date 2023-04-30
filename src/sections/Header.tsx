@@ -12,11 +12,15 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
 
     const [themeIcon, setThemeIcon] = useState('moon')
     const [theme, setTheme] = useState('light')
+    const [checkStatus, setCheckStatus] = useState('')
 
     const handleSearch = useCallback(async (query:string) => {
         try {
             const userData = await GitHubUser(query)
-            console.log("Search query in header: ", userData.login)
+            console.log("Result from API: ", userData)
+            if(userData[0] === 'No result') {
+                setCheckStatus(userData)
+            }
             searchResult(userData)
         } catch (error) {
             console.log(error)
@@ -47,7 +51,7 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
                     <img src={`src/assets/icons/icon-${themeIcon}.svg`} alt="icon" />
                 </div>
             </div>
-            <Search onSearch={handleSearch} />
+            <Search onSearch={handleSearch} noResult={checkStatus}/>
         </div>
     )
 }

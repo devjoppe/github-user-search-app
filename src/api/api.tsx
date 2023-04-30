@@ -8,7 +8,7 @@ const GitHubUser = async (query:string) => {
         return response.data;
     } catch (error) {
         console.error('Error fetching results:', error);
-        return [];
+        return ['No result'];
     }
 }
 
