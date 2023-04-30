@@ -15,9 +15,6 @@ function App() {
         setTheme(theme === 'light' ? 'dark' : 'light')
     }
 
-    console.log("Theme:", theme)
-    console.log("User data from App: ", userData)
-
     return (
         <div className="wrapper" data-theme={theme}>
             <div className="container">

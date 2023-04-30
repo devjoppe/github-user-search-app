@@ -110,6 +110,7 @@ input {
 
 // Button
 button {
+  cursor: pointer;
   background-color: var(--primary);
   padding: 14px 24px 14px 24px;
   border: 0;
@@ -117,4 +118,7 @@ button {
   color: var(--white);
   font-size: 14px;
   font-family: 'Space Mono', monospace;
+  &:hover {
+    opacity: 0.8;
+  }
 }

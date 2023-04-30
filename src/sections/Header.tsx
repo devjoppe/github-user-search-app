@@ -17,11 +17,11 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
     const handleSearch = useCallback(async (query:string) => {
         try {
             const userData = await GitHubUser(query)
-            console.log("Result from API: ", userData)
             if(userData[0] === 'No result') {
                 setCheckStatus(userData)
                 return
             }
+            setCheckStatus('')
             searchResult(userData)
         } catch (error) {
             console.log(error)
@@ -30,7 +30,7 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
 
     useEffect(() => {
         handleSearch('devjoppe').then(() => {
-            console.log("Gets first user?")
+            console.info("User found")
         })
     }, [])
 
@@ -39,8 +39,6 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
         setThemeIcon(themeIcon === 'sun' ? 'moon' : 'sun')
         onToggleTheme()
     }
-
-    console.log("Header Theme: ", theme)
 
     return(
         <div className="header-content">

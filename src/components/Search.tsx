@@ -16,7 +16,6 @@ const Search = ({onSearch, noResult}:onSearchProps) => {
     const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         onSearch(searchQuery)
-        console.log("Form submit", searchQuery)
         setSearchQuery('')
     }
 
@@ -25,7 +24,7 @@ const Search = ({onSearch, noResult}:onSearchProps) => {
             <div className="search-field">
                 <img src="src/assets/icons/icon-search.svg" alt="Search icon" />
                 <input type="text" value={searchQuery} onChange={handleInput} placeholder="Search GitHub user name" required />
-                {noResult && <span className="no-result">{noResult}</span> }
+                {noResult ? <span className="no-result">{noResult}</span> : '' }
                 <button type="submit">Search</button>
             </div>
         </form>
