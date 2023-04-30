@@ -18,7 +18,7 @@ const UserMainProfile = ({profileData}:profileInterface) => {
     return(
         <div className="main-profile-top-content">
             <div className="login">
-                <h2>{profileData.name}</h2>
+                <h2>{profileData.name ? profileData.name : profileData.login}</h2>
                 <a href={profileData.html_url} target="_blank">
                     <span className="login">@{profileData.login}</span>
                 </a>

@@ -3,6 +3,8 @@ import {profileInterface} from "../interfaces/profileInterface.tsx";
 const UserMainLinks = ({profileData}:profileInterface) => {
 
     const urlString = profileData.blog?.replace("https://www.", "")
+    const companyUrl = profileData.company?.replace('@', 'https://github.com/')
+    const twitterUrl = "https://twitter.com/"+profileData.twitter_username
 
     return(
         <div className="main-profile-links">
@@ -38,7 +40,9 @@ const UserMainLinks = ({profileData}:profileInterface) => {
                     {(profileData.twitter_username ?
                         <>
                             <img className="isData" src="src/assets/icons/icon-twitter.svg" alt="Location" />
-                            <span className="isData">{profileData.twitter_username}</span>
+                            <a href={twitterUrl} target="_blank">
+                                <span className="isData">{profileData.twitter_username}</span>
+                            </a>
                         </> :
                         <>
                             <img className="none" src="src/assets/icons/icon-twitter.svg" alt="Location" />
@@ -50,7 +54,9 @@ const UserMainLinks = ({profileData}:profileInterface) => {
                     {(profileData.company ?
                             <>
                                 <img className="isData" src="src/assets/icons/icon-company.svg" alt="Location" />
-                                <span className="isData">{profileData.company}</span>
+                                <a href={companyUrl} target="_blank">
+                                    <span className="isData">{profileData.company}</span>
+                                </a>
                             </> :
                             <>
                                 <img className="none" src="src/assets/icons/icon-company.svg" alt="Location" />

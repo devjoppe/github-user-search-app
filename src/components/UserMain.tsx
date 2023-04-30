@@ -28,14 +28,14 @@ const UserMain = ({profileData}:profileInterface) => {
                 <UserLeft profileData={profileData}/>
                 <div className="main-profile-data">
                     <UserMainProfile profileData={profileData}/>
-                    <p className="desktop-bio-text">{screenSize >= 1280 && profileData.bio}</p>
+                    <p className="desktop-bio-text">{ profileData.bio ? screenSize > 1280 && profileData.bio : screenSize > 1280 && 'This profile has no bio'}</p>
                 </div>
             </div>
             <div className="main-profile-bottom">
                 <div className="left-pane"></div>
                 <div className="right-pane">
                     <div className="main-profile-bio">
-                        <p>{screenSize < 1280 && profileData.bio}</p>
+                        <p>{ profileData.bio ? screenSize < 1280 && profileData.bio : 'This profile has no bio'}</p>
                     </div>
                     <UserMainStats profileData={profileData}/>
                     <UserMainLinks profileData={profileData}/>
