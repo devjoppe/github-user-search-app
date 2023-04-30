@@ -1,4 +1,6 @@
 .main-content {
+  display: block;
+  box-sizing: border-box;
   background-color: var(--background-content);
   border-radius: 15px;
   padding: 32px 24px 48px 24px;
@@ -49,25 +51,26 @@
 
 .main-profile-links {
   color: var(--p-text);
-  div {
-    display: flex;
-    align-items: center;
+  .links-column {
     margin-bottom: 16px;
-    &:first-child {
-      margin-bottom: 10px;
-    }
-    .none {
-      opacity: 0.6;
-    }
-    img {
-      display: block;
-      width: 20px;
-      object-fit: scale-down;
-      margin-right: 20px;
-      filter: var(--svg-color)
-    }
-    &:last-child {
-      margin-bottom: 0;
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      .none {
+        opacity: 0.6;
+      }
+      img {
+        display: block;
+        width: 20px;
+        height: 20px;
+        object-fit: scale-down;
+        margin-right: 20px;
+        filter: var(--svg-color)
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

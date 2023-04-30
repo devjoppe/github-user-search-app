@@ -24,7 +24,7 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
     }, [searchResult])
 
     useEffect(() => {
-        handleSearch('Octocat').then(() => {
+        handleSearch('devjoppe').then(() => {
             console.log("Gets first user?")
         })
     }, [])
@@ -38,7 +38,7 @@ const Header = ({searchResult, onToggleTheme}:headerProps) => {
     console.log("Header Theme: ", theme)
 
     return(
-        <div>
+        <div className="header-content">
             <div className="header-title-theme">
                 <h1>devfinder</h1>
                 <div onClick={toggleTheme} className="choose-theme">
