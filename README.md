@@ -4,7 +4,7 @@ This is my solution to the [GitHub user search app challenge on Frontend Mentor]
 
 ## The solution
 
-**⭐ Solution URL:** [Link to my GitHub user search app](https://www.github.com/devjoppe)
+**⭐ Solution URL:** [Link to my GitHub user search app](https://www.jotto.dev/project/github-user-search-app/)
 
 ## Built with
 
