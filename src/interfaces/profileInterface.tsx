@@ -12,5 +12,6 @@ export interface profileInterface {
         twitter_username?: string,
         company?: string,
         avatar_url?: string
+        html_url?:string
     }
 }

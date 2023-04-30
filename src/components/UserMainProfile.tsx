@@ -17,8 +17,12 @@ const UserMainProfile = ({profileData}:profileInterface) => {
 
     return(
         <div className="main-profile-top-content">
-            <h2>{profileData.name}</h2>
-            <span className="login">@{profileData.login}</span>
+            <div className="login">
+                <h2>{profileData.name}</h2>
+                <a href={profileData.html_url} target="_blank">
+                    <span className="login">@{profileData.login}</span>
+                </a>
+            </div>
             <span>Joined {joinedDate}</span>
         </div>
     )

@@ -1,0 +1,45 @@
+@media screen and (min-width: 1280px) {
+  .header-content {
+    width: 730px;
+  }
+  .main-content {
+    padding: 48px;
+    width: 730px;
+  }
+  .main-profile-bottom {
+    display: flex;
+    .left-pane {
+      display: flex;
+      width: 149px;
+    }
+    .right-pane {
+      margin-top: 32px;
+      .main-profile-bio {
+        display: none;
+      }
+    }
+  }
+  .main-profile-top-content {
+    flex-direction: row;
+    flex:1;
+    justify-content: space-between;
+    span {
+      margin-top: 6px;
+    }
+  }
+  .desktop-bio-text {
+    display: flex;
+    flex: 1;
+    margin-top: 20px;
+  }
+  .main-profile-stats {
+    justify-content: flex-start;
+    padding: 18px 32px 18px 32px;
+    div {
+      margin-right: 84px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -8,8 +8,22 @@
 }
 
 .main-profile-top {
+  .main-profile-data {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
   display: flex;
   color: var(--secondary);
+}
+
+.main-profile-bottom {
+  display: flex;
+  .right-pane {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 }
 
 .main-profile-top-content {
